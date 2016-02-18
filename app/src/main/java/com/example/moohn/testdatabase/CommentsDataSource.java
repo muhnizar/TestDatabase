@@ -36,7 +36,7 @@ public class CommentsDataSource {
         return cursorToComment(cursor);
     }
 
-    private void deleteComment(Comment comment){
+    protected void deleteComment(Comment comment){
         long id = comment.getId();
         database.delete(SQLLiteHelper.TABLE_COMMENTS, SQLLiteHelper.COLUMN_ID + "=" + id, null);
     }
@@ -59,4 +59,6 @@ public class CommentsDataSource {
         comment.setComment(cursor.getString(1));
         return comment;
     }
+
+
 }
