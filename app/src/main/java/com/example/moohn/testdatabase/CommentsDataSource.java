@@ -41,7 +41,7 @@ public class CommentsDataSource {
         database.delete(SQLLiteHelper.TABLE_COMMENTS, SQLLiteHelper.COLUMN_ID + "=" + id, null);
     }
 
-    private List<Comment> getAllComments(){
+    protected List<Comment> getAllComments(){
         List<Comment> comments = new ArrayList<>();
         Cursor cursor = database.query(SQLLiteHelper.TABLE_COMMENTS, allColumn, null, null, null, null, null);
         cursor.moveToFirst();
