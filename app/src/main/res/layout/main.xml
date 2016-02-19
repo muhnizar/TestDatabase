@@ -15,7 +15,9 @@
             android:text="add new"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:layout_margin="5pt"/>
+            android:layout_margin="5pt"
+            android:onClick="onClick"
+            />
             />
         <Button
             android:id="@+id/delete"
@@ -24,7 +26,10 @@
             android:text="delete"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:layout_margin="5pt"/>
+            android:layout_margin="5pt"
+            android:onClick="onClick"
+            />
+
             />
 
     </LinearLayout>
@@ -32,6 +37,6 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/list"
+        android:id="@android:id/list"
         />
 </LinearLayout>
