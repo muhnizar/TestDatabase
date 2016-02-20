@@ -19,4 +19,10 @@ public class Comment {
     public void setId(long id) {
         this.id = id;
     }
+
+    // Will be used by the ArrayAdapter in the ListView
+    @Override
+    public String toString() {
+        return comment;
+    }
 }

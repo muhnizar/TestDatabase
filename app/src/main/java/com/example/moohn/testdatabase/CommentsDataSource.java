@@ -33,7 +33,9 @@ public class CommentsDataSource {
         long insertId = database.insert(SQLLiteHelper.TABLE_COMMENTS, null, contentValues );
         Cursor cursor =  database.query(SQLLiteHelper.TABLE_COMMENTS,allColumn, SQLLiteHelper.COLUMN_ID +"=" +insertId,null,null,null,null);
         cursor.moveToFirst();
-        return cursorToComment(cursor);
+        Comment newComment = cursorToComment(cursor);
+        cursor.close();
+        return newComment;
     }
 
     protected void deleteComment(Comment comment){
